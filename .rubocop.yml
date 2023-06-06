@@ -1,0 +1,29 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-sequel
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - bin/*
+
+# Style
+Style/Documentation:
+  Enabled: false
+
+Style/FetchEnvVar:
+  Enabled: false
+
+# RSpec
+RSpec/ExampleLength:
+  Max: 15
+  CountAsOne: ['array']
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
