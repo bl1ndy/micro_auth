@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 # WEB
+gem 'jwt', '~> 2.7'
 gem 'puma', '~> 6.3'
 gem 'rake', '~> 13.0', '>= 13.0.6'
 gem 'sinatra', '~> 3.0', '>= 3.0.6', require: 'sinatra/base'
