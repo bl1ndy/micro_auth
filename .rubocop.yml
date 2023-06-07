@@ -17,6 +17,9 @@ Style/Documentation:
 Style/FetchEnvVar:
   Enabled: false
 
+Style/ModuleFunction:
+  Enabled: false
+
 # RSpec
 RSpec/ExampleLength:
   Max: 15
