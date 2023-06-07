@@ -1,0 +1,14 @@
+en:
+  model:
+    errors:
+      user:
+        name:
+          blank: "Name can't be blank"
+          format: 'Use only letters, digits or underscore character'
+        email:
+          blank: "Email can't be blank"
+        password:
+          blank: "Password can't be blank"
+      user_session:
+        uuid:
+          blank: "UUID can't be blank"
