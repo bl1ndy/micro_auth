@@ -12,5 +12,7 @@ namespace :db do
 
       Sequel::Migrator.run(db, migrations, target: version)
     end
+
+    Rake::Task['db:schema:dump'].invoke
   end
 end
