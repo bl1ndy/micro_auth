@@ -15,6 +15,7 @@ gem 'dry-validation', '~> 1.10'
 gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'sequel', '~> 5.69'
 gem 'sequel_secure_password', '~> 0.2.15'
+gem 'sequel-seed', '~> 1.1', '>= 1.1.2'
 
 # Configuration
 gem 'config', '~> 4.2'
