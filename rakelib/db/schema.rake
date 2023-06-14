@@ -3,10 +3,12 @@
 namespace :db do
   namespace :schema do
     desc 'Create file with DB schema'
-    task dump: :settings do
-      db = Settings.db.to_h
+    task :dump, %i[db] do |_, args|
+      db = args[:db]
+      db.extension :schema_dumper
+      dump = db.dump_schema_migration(same_db: true)
 
-      `sequel -D #{db[:adapter]}://#{db[:user]}:#{db[:password]}@#{db[:host]}/#{db[:database]} > ./db/schema.rb`
+      File.write('./db/schema.rb', dump)
     end
   end
 end

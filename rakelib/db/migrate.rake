@@ -6,13 +6,12 @@ namespace :db do
     require 'sequel/core'
     Sequel.extension :migration
 
-    Sequel.connect(Settings.db.to_hash) do |db|
-      migrations = File.expand_path('../../db/migrations', __dir__)
-      version = args.version.to_i if args.version
+    db = Sequel.connect(Settings.db.to_hash)
+    migrations = File.expand_path('../../db/migrations', __dir__)
+    version = args.version.to_i if args.version
 
-      Sequel::Migrator.run(db, migrations, target: version)
-    end
+    Sequel::Migrator.run(db, migrations, target: version)
 
-    Rake::Task['db:schema:dump'].invoke
+    Rake::Task['db:schema:dump'].invoke(db)
   end
 end
