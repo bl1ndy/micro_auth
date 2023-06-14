@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 # WEB
+gem 'jwt', '~> 2.7'
 gem 'puma', '~> 6.3'
 gem 'rake', '~> 13.0', '>= 13.0.6'
 gem 'sinatra', '~> 3.0', '>= 3.0.6', require: 'sinatra/base'
@@ -13,6 +14,8 @@ gem 'dry-initializer', '~> 3.1', '>= 3.1.1'
 gem 'dry-validation', '~> 1.10'
 gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'sequel', '~> 5.69'
+gem 'sequel_secure_password', '~> 0.2.15'
+gem 'sequel-seed', '~> 1.1', '>= 1.1.2'
 
 # Configuration
 gem 'config', '~> 4.2'

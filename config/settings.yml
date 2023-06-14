@@ -1,0 +1,7 @@
+db:
+  adapter: postgresql
+  host: localhost
+  user: postgres
+  password: postgres
+app:
+  secret: secret
